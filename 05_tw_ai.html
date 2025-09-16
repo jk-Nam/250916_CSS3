@@ -1,258 +1,221 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="ko" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gemini AI - 혁신적인 AI 솔루션</title>
     <!-- Tailwind CSS Play CDN (최신 v3) -->
     <!-- 참고: v4는 정식 CDN이 없어 빌드 설정이 필요하므로, 호환되는 v3 CDN을 사용했습니다. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      // Tailwind CSS 커스텀 설정 (선택 사항)
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#4f46e5",
-              "primary-hover": "#4338ca",
-            },
-          },
-        },
-      };
+        // Tailwind CSS 커스텀 설정
+        tailwind.config = {
+            darkMode: 'class', // 'class' 기반 다크 모드 활성화
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4f46e5',
+                        'primary-hover': '#4338ca',
+                    }
+                }
+            }
+        }
     </script>
-  </head>
-  <body class="bg-gray-50 font-sans antialiased">
+</head>
+<body class="bg-gray-50 font-sans antialiased dark:bg-gray-900">
+
     <!-- 헤더 -->
-    <header class="bg-white shadow-sm">
-      <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <div class="text-2xl font-bold text-gray-800">
-          <a href="#">🚀 Gemini AI</a>
+    <header class="bg-white shadow-sm dark:bg-gray-800/50 dark:shadow-lg backdrop-blur-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800 dark:text-white">
+                <a href="#">🚀 Gemini AI</a>
+            </div>
+            <div class="flex items-center">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary">특징</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary">후기</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary">가격</a>
+                </nav>
+                <div class="flex items-center ml-8">
+                    <!-- 다크 모드 토글 버튼 -->
+                    <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm-.707 10.607a1 1 0 010-1.414l.707-.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0zM17 13a1 1 0 100 2h-1a1 1 0 100-2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM3 11a1 1 0 100-2H2a1 1 0 100 2h1z"></path></svg>
+                    </button>
+                    <a href="#pricing" class="bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-primary-hover transition duration-300 ml-4">시작하기</a>
+                </div>
+            </div>
         </div>
-        <nav class="hidden md:flex space-x-8">
-          <a href="#features" class="text-gray-600 hover:text-primary">특징</a>
-          <a href="#testimonials" class="text-gray-600 hover:text-primary"
-            >후기</a
-          >
-          <a href="#pricing" class="text-gray-600 hover:text-primary">가격</a>
-        </nav>
-        <a
-          href="#pricing"
-          class="bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-primary-hover transition duration-300"
-          >시작하기</a
-        >
-      </div>
     </header>
 
     <!-- 히어로 섹션 -->
     <main class="container mx-auto px-6 py-16 md:py-24">
-      <div class="flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-          <h1
-            class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4"
-          >
-            미래를 코딩하는<br /><span class="text-primary"
-              >Gemini AI 솔루션</span
-            >
-          </h1>
-          <p class="text-lg text-gray-600 mb-8">
-            복잡한 문제를 해결하고 생산성을 극대화하는 AI 기반 개발자
-            도구입니다. 지금 바로 당신의 워크플로우를 혁신하세요.
-          </p>
-          <div class="flex justify-center md:justify-start space-x-4">
-            <a
-              href="#pricing"
-              class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition duration-300"
-              >무료 체험 시작</a
-            >
-            <a
-              href="#features"
-              class="bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition duration-300"
-              >더 알아보기</a
-            >
-          </div>
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight mb-4">미래를 코딩하는<br><span class="text-primary">Gemini AI 솔루션</span></h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">복잡한 문제를 해결하고 생산성을 극대화하는 AI 기반 개발자 도구입니다. 지금 바로 당신의 워크플로우를 혁신하세요.</p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#pricing" class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition duration-300">무료 체험 시작</a>
+                    <a href="#features" class="bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 transition duration-300">더 알아보기</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://via.placeholder.com/600x400/e2e8f0/334155?text=Gemini+AI+Interface" alt="Product Screenshot" class="rounded-lg shadow-2xl">
+            </div>
         </div>
-        <div class="md:w-1/2">
-          <img
-            src="https://via.placeholder.com/600x400/e2e8f0/334155?text=Gemini+AI+Interface"
-            alt="Product Screenshot"
-            class="rounded-lg shadow-2xl"
-          />
-        </div>
-      </div>
     </main>
 
     <!-- 특징 섹션 -->
-    <section id="features" class="bg-white py-16 md:py-24">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-            왜 Gemini AI인가?
-          </h2>
-          <p class="text-gray-600 mt-4">
-            당신의 개발 경험을 한 단계 끌어올릴 강력한 기능들
-          </p>
+    <section id="features" class="bg-white dark:bg-gray-800 py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">왜 Gemini AI인가?</h2>
+                <p class="text-gray-600 dark:text-gray-400 mt-4">당신의 개발 경험을 한 단계 끌어올릴 강력한 기능들</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-8 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <div class="text-4xl text-primary mb-4">💡</div>
+                    <h3 class="text-xl font-bold mb-2 dark:text-white">지능형 코드 완성</h3>
+                    <p class="text-gray-600 dark:text-gray-300">AI가 컨텍스트를 파악하여 더 빠르고 정확한 코드를 제안합니다.</p>
+                </div>
+                <div class="p-8 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <div class="text-4xl text-primary mb-4">🐞</div>
+                    <h3 class="text-xl font-bold mb-2 dark:text-white">자동 버그 감지</h3>
+                    <p class="text-gray-600 dark:text-gray-300">코드를 작성하는 동안 실시간으로 잠재적인 버그를 찾아 수정합니다.</p>
+                </div>
+                <div class="p-8 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <div class="text-4xl text-primary mb-4">🔄</div>
+                    <h3 class="text-xl font-bold mb-2 dark:text-white">코드 리팩토링 제안</h3>
+                    <p class="text-gray-600 dark:text-gray-300">더 깨끗하고 효율적인 코드를 위해 AI가 최적의 리팩토링 방안을 제시합니다.</p>
+                </div>
+            </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div class="p-8 bg-gray-50 rounded-lg">
-            <div class="text-4xl text-primary mb-4">💡</div>
-            <h3 class="text-xl font-bold mb-2">지능형 코드 완성</h3>
-            <p class="text-gray-600">
-              AI가 컨텍스트를 파악하여 더 빠르고 정확한 코드를 제안합니다.
-            </p>
-          </div>
-          <div class="p-8 bg-gray-50 rounded-lg">
-            <div class="text-4xl text-primary mb-4">🐞</div>
-            <h3 class="text-xl font-bold mb-2">자동 버그 감지</h3>
-            <p class="text-gray-600">
-              코드를 작성하는 동안 실시간으로 잠재적인 버그를 찾아 수정합니다.
-            </p>
-          </div>
-          <div class="p-8 bg-gray-50 rounded-lg">
-            <div class="text-4xl text-primary mb-4">🔄</div>
-            <h3 class="text-xl font-bold mb-2">코드 리팩토링 제안</h3>
-            <p class="text-gray-600">
-              더 깨끗하고 효율적인 코드를 위해 AI가 최적의 리팩토링 방안을
-              제시합니다.
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- 고객 후기 섹션 -->
     <section id="testimonials" class="py-16 md:py-24">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-            전 세계 개발자들이 극찬합니다
-          </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white p-8 rounded-lg shadow-md">
-            <p class="text-gray-600 mb-4">
-              "Gemini AI 덕분에 개발 시간이 절반으로 줄었어요. 이제 더 중요한
-              로직에 집중할 수 있습니다."
-            </p>
-            <div class="font-bold text-gray-900">- 김개발, 스타트업 CTO</div>
-          </div>
-          <div class="bg-white p-8 rounded-lg shadow-md">
-            <p class="text-gray-600 mb-4">
-              "버그 찾느라 밤새우던 날들이여, 안녕! 정말 혁신적인 툴입니다."
-            </p>
-            <div class="font-bold text-gray-900">- 박코딩, 백엔드 개발자</div>
-          </div>
-          <div class="bg-white p-8 rounded-lg shadow-md">
-            <p class="text-gray-600 mb-4">
-              "신입 개발자 교육용으로 도입했는데, 팀 전체의 코드 품질이 상향
-              평준화되었어요."
-            </p>
-            <div class="font-bold text-gray-900">
-              - 이주니어, 프론트엔드 개발자
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">전 세계 개발자들이 극찬합니다</h2>
             </div>
-          </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">"Gemini AI 덕분에 개발 시간이 절반으로 줄었어요. 이제 더 중요한 로직에 집중할 수 있습니다."</p>
+                    <div class="font-bold text-gray-900 dark:text-white">- 김개발, 스타트업 CTO</div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">"버그 찾느라 밤새우던 날들이여, 안녕! 정말 혁신적인 툴입니다."</p>
+                    <div class="font-bold text-gray-900 dark:text-white">- 박코딩, 백엔드 개발자</div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">"신입 개발자 교육용으로 도입했는데, 팀 전체의 코드 품질이 상향 평준화되었어요."</p>
+                    <div class="font-bold text-gray-900 dark:text-white">- 이주니어, 프론트엔드 개발자</div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- 가격 정책 섹션 -->
-    <section id="pricing" class="bg-white py-16 md:py-24">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-            당신에게 맞는 플랜을 선택하세요
-          </h2>
+    <section id="pricing" class="bg-white dark:bg-gray-800 py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">당신에게 맞는 플랜을 선택하세요</h2>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-center items-center gap-8">
+                <!-- Basic Plan -->
+                <div class="w-full lg:w-1/3 bg-gray-50 dark:bg-gray-700/50 rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-bold text-center mb-4 dark:text-white">개인용</h3>
+                    <div class="text-center text-4xl font-extrabold mb-4 dark:text-white">$10<span class="text-lg font-normal">/월</span></div>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300 mb-8">
+                        <li><span class="text-green-500 dark:text-green-400 mr-2">✔</span>지능형 코드 완성</li>
+                        <li><span class="text-green-500 dark:text-green-400 mr-2">✔</span>자동 버그 감지</li>
+                        <li><span class="text-gray-400 mr-2">✖</span>코드 리팩토링 제안</li>
+                        <li><span class="text-gray-400 mr-2">✖</span>팀 협업 기능</li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500 transition duration-300">선택하기</button>
+                </div>
+                <!-- Pro Plan (Featured) -->
+                <div class="w-full lg:w-1/3 bg-primary text-white rounded-lg shadow-2xl p-10 border-4 border-primary-hover">
+                    <h3 class="text-3xl font-bold text-center mb-4">프로</h3>
+                    <div class="text-center text-5xl font-extrabold mb-4">$25<span class="text-lg font-normal">/월</span></div>
+                    <ul class="space-y-4 mb-8">
+                        <li><span class="text-green-300 mr-2">✔</span>지능형 코드 완성</li>
+                        <li><span class="text-green-300 mr-2">✔</span>자동 버그 감지</li>
+                        <li><span class="text-green-300 mr-2">✔</span>코드 리팩토링 제안</li>
+                        <li><span class="text-gray-300 mr-2">✖</span>팀 협업 기능</li>
+                    </ul>
+                    <button class="w-full bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300">14일 무료 체험</button>
+                </div>
+                <!-- Team Plan -->
+                <div class="w-full lg:w-1/3 bg-gray-50 dark:bg-gray-700/50 rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-bold text-center mb-4 dark:text-white">팀용</h3>
+                    <div class="text-center text-4xl font-extrabold mb-4 dark:text-white">$45<span class="text-lg font-normal">/월</span></div>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300 mb-8">
+                        <li><span class="text-green-500 dark:text-green-400 mr-2">✔</span>지능형 코드 완성</li>
+                        <li><span class="text-green-500 dark:text-green-400 mr-2">✔</span>자동 버그 감지</li>
+                        <li><span class="text-green-500 dark:text-green-400 mr-2">✔</span>코드 리팩토링 제안</li>
+                        <li><span class="text-green-500 dark:text-green-400 mr-2">✔</span>팀 협업 기능</li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-gray-500 transition duration-300">문의하기</button>
+                </div>
+            </div>
         </div>
-        <div
-          class="flex flex-col lg:flex-row justify-center items-center gap-8"
-        >
-          <!-- Basic Plan -->
-          <div
-            class="w-full lg:w-1/3 bg-gray-50 rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300"
-          >
-            <h3 class="text-2xl font-bold text-center mb-4">개인용</h3>
-            <div class="text-center text-4xl font-extrabold mb-4">
-              $10<span class="text-lg font-normal">/월</span>
-            </div>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li>
-                <span class="text-green-500 mr-2">✔</span>지능형 코드 완성
-              </li>
-              <li><span class="text-green-500 mr-2">✔</span>자동 버그 감지</li>
-              <li>
-                <span class="text-gray-400 mr-2">✖</span>코드 리팩토링 제안
-              </li>
-              <li><span class="text-gray-400 mr-2">✖</span>팀 협업 기능</li>
-            </ul>
-            <button
-              class="w-full bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition duration-300"
-            >
-              선택하기
-            </button>
-          </div>
-          <!-- Pro Plan (Featured) -->
-          <div
-            class="w-full lg:w-1/3 bg-primary text-white rounded-lg shadow-2xl p-10 border-4 border-primary-hover"
-          >
-            <h3 class="text-3xl font-bold text-center mb-4">프로</h3>
-            <div class="text-center text-5xl font-extrabold mb-4">
-              $25<span class="text-lg font-normal">/월</span>
-            </div>
-            <ul class="space-y-4 mb-8">
-              <li>
-                <span class="text-green-300 mr-2">✔</span>지능형 코드 완성
-              </li>
-              <li><span class="text-green-300 mr-2">✔</span>자동 버그 감지</li>
-              <li>
-                <span class="text-green-300 mr-2">✔</span>코드 리팩토링 제안
-              </li>
-              <li><span class="text-gray-300 mr-2">✖</span>팀 협업 기능</li>
-            </ul>
-            <button
-              class="w-full bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300"
-            >
-              14일 무료 체험
-            </button>
-          </div>
-          <!-- Team Plan -->
-          <div
-            class="w-full lg:w-1/3 bg-gray-50 rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300"
-          >
-            <h3 class="text-2xl font-bold text-center mb-4">팀용</h3>
-            <div class="text-center text-4xl font-extrabold mb-4">
-              $45<span class="text-lg font-normal">/월</span>
-            </div>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li>
-                <span class="text-green-500 mr-2">✔</span>지능형 코드 완성
-              </li>
-              <li><span class="text-green-500 mr-2">✔</span>자동 버그 감지</li>
-              <li>
-                <span class="text-green-500 mr-2">✔</span>코드 리팩토링 제안
-              </li>
-              <li><span class="text-green-500 mr-2">✔</span>팀 협업 기능</li>
-            </ul>
-            <button
-              class="w-full bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition duration-300"
-            >
-              문의하기
-            </button>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- 푸터 -->
-    <footer class="bg-gray-800 text-white py-12">
-      <div class="container mx-auto px-6 text-center">
-        <p>&copy; 2025 Gemini AI. All rights reserved.</p>
-        <div class="flex justify-center space-x-6 mt-4">
-          <a href="#" class="hover:text-gray-400">개인정보보호정책</a>
-          <a href="#" class="hover:text-gray-400">이용약관</a>
-          <a href="#" class="hover:text-gray-400">고객센터</a>
+    <footer class="bg-gray-800 dark:bg-gray-800/50 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="dark:text-gray-300">&copy; 2025 Gemini AI. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="hover:text-gray-400 dark:text-gray-400 dark:hover:text-white">개인정보보호정책</a>
+                <a href="#" class="hover:text-gray-400 dark:text-gray-400 dark:hover:text-white">이용약관</a>
+                <a href="#" class="hover:text-gray-400 dark:text-gray-400 dark:hover:text-white">고객센터</a>
+            </div>
         </div>
-      </div>
     </footer>
-  </body>
+
+    <script>
+        // 다크/라이트 모드 토글 스크립트
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // 초기 테마 설정 (localStorage 또는 시스템 설정 확인)
+        if (localStorage.getItem('color-theme') === 'dark' || 
+           (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            // 아이콘 토글
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            // localStorage에 테마 정보가 있는지 확인
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            // localStorage에 정보가 없는 경우
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+    </script>
+
+</body>
 </html>
