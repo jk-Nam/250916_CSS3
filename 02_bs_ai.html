@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김개발의 포트폴리오</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .bg-light {
+            background-color: #f8f9fa !important;
+        }
+        .project-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">김개발</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">소개</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">기술</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">프로젝트</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">연락처</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <header class="py-5">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center justify-content-center">
+                <div class="col-lg-8 col-xl-7 col-xxl-6">
+                    <div class="my-5 text-center text-xl-start">
+                        <h1 class="display-5 fw-bolder text-dark mb-2">안녕하세요, 김개발입니다.</h1>
+                        <p class="lead fw-normal text-dark-50 mb-4">창의적인 아이디어를 실용적인 웹 솔루션으로 구현하는 것을 즐기는 백엔드 개발자입니다. 견고하고 확장 가능한 시스템을 구축하는 데 열정을 가지고 있습니다.</p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#projects">프로젝트 보기</a>
+                            <a class="btn btn-outline-secondary btn-lg px-4" href="https://github.com" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                    <img class="img-fluid rounded-3 my-5" src="https://via.placeholder.com/600x400" alt="..."/>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 소개 섹션 -->
+    <section class="section bg-light" id="about">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-4 fw-bolder">소개</h2>
+                    <p class="lead">3년차 백엔드 개발자로서 Python, Java, Node.js를 주로 사용합니다. 클라우드 환경(AWS)에서의 개발 및 배포 경험이 풍부하며, 대용량 트래픽 처리와 데이터베이스 최적화에 관심이 많습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기술 섹션 -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bolder">기술 스택</h2>
+                <p class="lead">제가 주로 사용하는 기술들입니다.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="mb-4">
+                        <h4>Backend</h4>
+                        <span class="badge bg-primary fs-6 m-1">Python</span>
+                        <span class="badge bg-primary fs-6 m-1">Django</span>
+                        <span class="badge bg-primary fs-6 m-1">Java</span>
+                        <span class="badge bg-primary fs-6 m-1">Spring Boot</span>
+                        <span class="badge bg-primary fs-6 m-1">Node.js</span>
+                        <span class="badge bg-primary fs-6 m-1">Express</span>
+                    </div>
+                    <div class="mb-4">
+                        <h4>Database</h4>
+                        <span class="badge bg-success fs-6 m-1">MySQL</span>
+                        <span class="badge bg-success fs-6 m-1">PostgreSQL</span>
+                        <span class="badge bg-success fs-6 m-1">MongoDB</span>
+                        <span class="badge bg-success fs-6 m-1">Redis</span>
+                    </div>
+                    <div>
+                        <h4>DevOps</h4>
+                        <span class="badge bg-info fs-6 m-1">AWS</span>
+                        <span class="badge bg-info fs-6 m-1">Docker</span>
+                        <span class="badge bg-info fs-6 m-1">Kubernetes</span>
+                        <span class="badge bg-info fs-6 m-1">Jenkins</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로젝트 섹션 -->
+    <section class="section bg-light" id="projects">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bolder">프로젝트</h2>
+                <p class="lead">제가 진행했던 주요 프로젝트들입니다.</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <!-- 프로젝트 1 -->
+                <div class="col-lg-4 mb-5">
+                    <div class="card h-100 shadow border-0 project-card">
+                        <img class="card-img-top" src="https://via.placeholder.com/700x350" alt="..." />
+                        <div class="card-body p-4">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Django</div>
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">React</div>
+                            <h5 class="card-title mb-3">쇼핑몰 백엔드 시스템</h5>
+                            <p class="card-text mb-0">사용자 인증, 상품 관리, 주문 처리, 결제 시스템(PG 연동)을 구현했습니다. RESTful API를 설계하고 Django REST framework를 사용했습니다.</p>
+                        </div>
+                        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="small">
+                                        <div class="fw-bold">주요 기술</div>
+                                        <div class="text-muted">Python, Django, DRF, PostgreSQL</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 프로젝트 2 -->
+                <div class="col-lg-4 mb-5">
+                    <div class="card h-100 shadow border-0 project-card">
+                        <img class="card-img-top" src="https://via.placeholder.com/700x350" alt="..." />
+                        <div class="card-body p-4">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Spring Boot</div>
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Vue.js</div>
+                            <h5 class="card-title mb-3">실시간 예약 시스템</h5>
+                            <p class="card-text mb-0">동시성 제어를 통해 여러 사용자가 동시에 예약하는 상황을 처리하고, WebSocket을 이용해 실시간 좌석 현황을 제공했습니다.</p>
+                        </div>
+                        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="small">
+                                        <div class="fw-bold">주요 기술</div>
+                                        <div class="text-muted">Java, Spring Boot, JPA, Redis, WebSocket</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 프로젝트 3 -->
+                <div class="col-lg-4 mb-5">
+                    <div class="card h-100 shadow border-0 project-card">
+                        <img class="card-img-top" src="https://via.placeholder.com/700x350" alt="..." />
+                        <div class="card-body p-4">
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Node.js</div>
+                            <div class="badge bg-primary bg-gradient rounded-pill mb-2">AWS Lambda</div>
+                            <h5 class="card-title mb-3">서버리스 이미지 처리</h5>
+                            <p class="card-text mb-0">AWS S3에 이미지가 업로드되면 Lambda 함수가 트리거되어 이미지 리사이징, 워터마크 추가 등의 작업을 비동기적으로 처리하는 시스템을 구축했습니다.</p>
+                        </div>
+                        <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <div class="small">
+                                        <div class="fw-bold">주요 기술</div>
+                                        <div class="text-muted">Node.js, AWS S3, Lambda, API Gateway</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 연락처 섹션 -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bolder">연락처</h2>
+                <p class="lead">아래 방법으로 편하게 연락주세요.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="d-flex justify-content-center fs-2 gap-4">
+                        <a class="text-dark" href="mailto:youremail@example.com"><i class="bi bi-envelope-fill"></i></a>
+                        <a class="text-dark" href="https://github.com/your-github" target="_blank"><i class="bi bi-github"></i></a>
+                        <a class="text-dark" href="https://linkedin.com/in/your-linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; 김개발 2025</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
